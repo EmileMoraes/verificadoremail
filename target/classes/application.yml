@@ -8,6 +8,9 @@ spring:
     password: 191197
     url: jdbc:postgresql://localhost:5432/registration
     username: postgres
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -16,3 +19,20 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  mail:
+    host: localhost
+    port: 1025
+    username: emile
+    password: 191197
+
+    porperties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: false
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000

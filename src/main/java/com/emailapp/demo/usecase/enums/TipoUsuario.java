@@ -1,4 +1,4 @@
-package com.emailapp.demo.usuario;
+package com.emailapp.demo.usecase.enums;
 
 public enum TipoUsuario {
     USUARIO,

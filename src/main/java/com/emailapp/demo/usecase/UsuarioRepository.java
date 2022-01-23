@@ -1,6 +1,7 @@
-package com.emailapp.demo.usuario;
+package com.emailapp.demo.usecase;
 
 
+import com.emailapp.demo.usecase.model.UsuarioApp;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

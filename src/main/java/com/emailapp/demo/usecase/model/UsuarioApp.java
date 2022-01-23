@@ -1,5 +1,6 @@
-package com.emailapp.demo.usuario;
+package com.emailapp.demo.usecase.model;
 
+import com.emailapp.demo.usecase.enums.TipoUsuario;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
