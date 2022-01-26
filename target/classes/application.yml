@@ -22,7 +22,7 @@ spring:
   mail:
     host: localhost
     port: 1025
-    username: emile
+    username: user
     password: 191197
 
     porperties:
@@ -32,7 +32,7 @@ spring:
             trust: "*"
           auth: true
           starttls:
-            enable: false
+            enable: true
           connectiontimeout: 5000
           timeout: 3000
           writetimeout: 5000

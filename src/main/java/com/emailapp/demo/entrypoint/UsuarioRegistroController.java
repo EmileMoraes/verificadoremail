@@ -22,17 +22,17 @@ public class UsuarioRegistroController {
     private UsuarioService usuarioService;
 
 
-    @PostMapping
+    @PostMapping(produces="application/json", consumes="application/json")
     public String registro(@RequestBody RegistroRequest registroRequest) {
         return registroService.registro(registroRequest);
     }
 
-    @GetMapping(path = "valida")
+    @GetMapping(path = "valida", produces="application/json")
     public String validaToken(@RequestParam("token") String token){
         return registroService.confirmaToken(token);
     }
 
-    @GetMapping(path = "usuario")
+    @GetMapping(path = "usuario", produces="application/json")
     public ResponseEntity<List<UsuarioApp>> usuariosApp(){
         if(usuarioService.usuarioAppList().isEmpty()){
             return ResponseEntity.notFound().build();
@@ -41,7 +41,7 @@ public class UsuarioRegistroController {
         return ResponseEntity.ok(usuarioService.usuarioAppList());
     }
 
-    @GetMapping(path = "usuario/{id}")
+    @GetMapping(path = "usuario/{id}", produces="application/json")
     public ResponseEntity<UsuarioApp> findById(@PathVariable Long id) throws UsuarioNotFoundException {
         if(usuarioService.findById(id) == null){
             return ResponseEntity.notFound().build();

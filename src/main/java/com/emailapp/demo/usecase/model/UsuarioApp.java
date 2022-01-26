@@ -1,6 +1,7 @@
 package com.emailapp.demo.usecase.model;
 
 import com.emailapp.demo.usecase.enums.TipoUsuario;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,14 +19,20 @@ import java.util.Collections;
 @Entity
 public class UsuarioApp implements UserDetails {
 
+    @ApiModelProperty(value = "Código do usuario")
     @Id
     @SequenceGenerator(name = "cliente_id", sequenceName = "cliente_id", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_id")
     private Long id;
+    @ApiModelProperty(value = "Nome do usuario")
     private String nome;
+    @ApiModelProperty(value = "Sobrenome do usuario")
     private String sobrenome;
+    @ApiModelProperty(value = "Email do usuario")
     private String email;
+    @ApiModelProperty(value = "Senha do usuario")
     private String senha;
+    @ApiModelProperty(value = "Tipo de usuario")
     @Enumerated(EnumType.STRING)
     private TipoUsuario tipoUsuario;
 

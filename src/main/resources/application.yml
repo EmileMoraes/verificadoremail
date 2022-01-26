@@ -5,7 +5,7 @@ server:
 
 spring:
   datasource:
-    password: 191197
+    password:
     url: jdbc:postgresql://localhost:5432/registration
     username: postgres
   mvc:
@@ -22,8 +22,8 @@ spring:
   mail:
     host: localhost
     port: 1025
-    username: emile
-    password: 191197
+    username: user
+    password:
 
     porperties:
       mail:
@@ -32,7 +32,7 @@ spring:
             trust: "*"
           auth: true
           starttls:
-            enable: false
+            enable: true
           connectiontimeout: 5000
           timeout: 3000
           writetimeout: 5000
